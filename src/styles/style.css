@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('../../assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    background-color: #1363DF;
+    font-family: 'Nunito-Regular';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 86px);
+    padding-bottom: 20px;
+}
+
+.container-app {
+    height: 100%;
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    gap: 2%;
+}
+
+.container-card-nota {
+    overflow: auto;
+    padding-right: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.form-notas {
+    width: 100%;
+    max-width: 500px;
+    height: 550px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    gap: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.textbox-general {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Nunito-Regular';
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.textbox-general:enabled:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #c7d2fe;
+    border-color: #47B5FF;
+}
+
+.btn-principal {
+    background-color: #1363DF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Nunito-Regular';
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.btn-principal:hover {
+    background-color: #3d80e6;
+}
+
+.btn-principal:active {
+    background-color: #47B5FF;
+}
+
+.card-nota {
+    max-height: 300px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    gap: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-nota p, h3 {
+    margin: 0;
+}
+
+.container-card-nota::-webkit-scrollbar, .container-card-nota::-webkit-scrollbar {
+	width: 7px;
+}
+
+.container-card-nota::-webkit-scrollbar-thumb, .container-card-nota::-webkit-scrollbar-thumb {
+	background: linear-gradient(#1363DF, #3d80e6);  
+	border-radius: 5px;
+}
