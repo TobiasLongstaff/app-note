@@ -13,18 +13,19 @@
     </header>
     <main class="container">
         <div class="container-app">
-            <form class="form-notas">
+            <form class="form-notas" id="form-notas">
+                <h3>Crear Notas</h3>
                 <div>
                     <label>Titulo</label>
-                    <input class="textbox-general" type="text" placeholder="Primerar nota" required>                
+                    <input class="textbox-general" id="titulo" type="text" placeholder="Primerar nota" required>                
                 </div>
                 <div>
                     <label>Fecha</label>
-                    <input class="textbox-general" type="datetime-local" required></input>
+                    <input class="textbox-general" id="fecha" type="datetime-local" required></input>
                 </div>
                 <div>
                     <label>Nota</label>
-                    <textarea class="textbox-general" cols="30" rows="10" required></textarea>                
+                    <textarea class="textbox-general" id="nota" cols="30" rows="10" required></textarea>                
                 </div>
                 <button type="submit" class="btn-principal">Submit</button>
             </form>            
@@ -34,28 +35,9 @@
                     <p>Fecha: 17/06/2022</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad id beatae. Ab facere fugiat mollitia dolorem architecto iusto, repellat dignissimos temporibus, optio a enim dolores quaerat corrupti recusandae at!</p>
                 </div>
-                <div class="card-nota">
-                    <h3>Titulo</h3>
-                    <p>Fecha: 17/06/2022</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad id beatae. Ab facere fugiat mollitia dolorem architecto iusto, repellat dignissimos temporibus, optio a enim dolores quaerat corrupti recusandae at!</p>
-                </div>
-                <div class="card-nota">
-                    <h3>Titulo</h3>
-                    <p>Fecha: 17/06/2022</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad id beatae. Ab facere fugiat mollitia dolorem architecto iusto, repellat dignissimos temporibus, optio a enim dolores quaerat corrupti recusandae at!</p>
-                </div>
-                <div class="card-nota">
-                    <h3>Titulo</h3>
-                    <p>Fecha: 17/06/2022</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad id beatae. Ab facere fugiat mollitia dolorem architecto iusto, repellat dignissimos temporibus, optio a enim dolores quaerat corrupti recusandae at!</p>
-                </div>
-                <div class="card-nota">
-                    <h3>Titulo</h3>
-                    <p>Fecha: 17/06/2022</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad id beatae. Ab facere fugiat mollitia dolorem architecto iusto, repellat dignissimos temporibus, optio a enim dolores quaerat corrupti recusandae at!</p>
-                </div>
             </article>
         </div>
     </main>
+    <script src="src/scripts/script.js"></script>
 </body>
 </html>
