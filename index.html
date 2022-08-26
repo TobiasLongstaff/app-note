@@ -5,12 +5,13 @@
     <link rel="ico" type="image/png" href="/assets/favicon.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>App Note</title>
 </head>
 <body>
-    <header>
+    <nav class="navigation">
         <h1>App Note</h1>
-    </header>
+    </nav>
     <main class="container">
         <div class="container-app">
             <form class="form-notas" id="form-notas">
@@ -28,16 +29,13 @@
                     <textarea class="textbox-general" id="nota" cols="30" rows="10" required></textarea>                
                 </div>
                 <button type="submit" class="btn-principal">Submit</button>
-            </form>            
-            <article class="container-card-nota">
-                <div class="card-nota">
-                    <h3>Titulo</h3>
-                    <p>Fecha: 17/06/2022</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad id beatae. Ab facere fugiat mollitia dolorem architecto iusto, repellat dignissimos temporibus, optio a enim dolores quaerat corrupti recusandae at!</p>
-                </div>
+            </form>
+            <article class="container-card-nota" id="container-notas">
             </article>
         </div>
     </main>
+    <!-- LIBRERIA PARA COLOCAR LAS NOTAS -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <script src="src/scripts/script.js"></script>
 </body>
 </html>

@@ -10,4 +10,14 @@ function insert_note(connection, data, callback) {
     })
 }
 
-module.exports = { insert_note }
+function update_note(connection, date, callback) {
+    let updateQuery = 'UPDATE notas SET titulo = ?, fecha = ?, nota = ? WHERE id = ?'
+    let query = mysql.format(updateQuery, [date.titulo, date.fecha, date.nota, date.id])
+
+    connection.query(query, function(error, result) {
+        if(error) throw error
+        callback(result)
+    })
+}
+
+module.exports = { insert_note, update_note }
