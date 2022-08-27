@@ -10,30 +10,41 @@
 </head>
 <body>
     <nav class="navigation">
+        <button type="button" id="btn-popup" class="btn-crear">
+            <i class="uil uil-plus"></i> 
+            Nueva nota
+        </button>
         <h1>App Note</h1>
     </nav>
     <main class="container">
         <div class="container-app">
-            <form class="form-notas" id="form-notas">
-                <h3>Crear Notas</h3>
-                <div>
-                    <label>Titulo</label>
-                    <input class="textbox-general" id="titulo" type="text" placeholder="Primerar nota" required>                
-                </div>
-                <div>
-                    <label>Fecha</label>
-                    <input class="textbox-general" id="fecha" type="datetime-local" required></input>
-                </div>
-                <div>
-                    <label>Nota</label>
-                    <textarea class="textbox-general" id="nota" cols="30" rows="10" required></textarea>                
-                </div>
-                <button type="submit" class="btn-principal">Submit</button>
-            </form>
             <article class="container-card-nota" id="container-notas">
             </article>
         </div>
     </main>
+    <article class="overlay-popup">
+        <form class="form-notas" id="form-notas">
+            <header class="header-popup">
+                <h3>Crear Notas</h3>
+                <button class="btn-control" type="button" id="cerrar-popup">
+                    <i class="uil uil-times"></i>
+                </button>
+            </header>
+            <div>
+                <label>Titulo</label>
+                <input class="textbox-general" id="titulo" type="text" placeholder="Primerar nota" required>                
+            </div>
+            <div>
+                <label>Fecha</label>
+                <input class="textbox-general" id="fecha" type="datetime-local" required></input>
+            </div>
+            <div>
+                <label>Nota</label>
+                <textarea class="textbox-general" id="nota" cols="30" rows="10" required></textarea>                
+            </div>
+            <button type="submit" class="btn-principal">Submit</button>
+        </form>        
+    </article>
     <!-- LIBRERIA PARA COLOCAR LAS NOTAS -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <script src="src/scripts/script.js"></script>

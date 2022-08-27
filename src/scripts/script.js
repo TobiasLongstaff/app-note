@@ -8,6 +8,7 @@ const obtenerNotas = async () => {
         let plantilla = '';
         notas.map(nota =>
         {
+            const fecha = new Date(nota.fecha)
             plantilla += 
             `
             <div class="card-nota">
@@ -23,7 +24,7 @@ const obtenerNotas = async () => {
                             </button>
                         </div>
                     </div>
-                    <p>Fecha: ${nota.fecha}</p>
+                    <p>Fecha: ${fecha.toLocaleDateString()}</p>
                 </header>
                 <main>
                     <p>${nota.nota}</p>
@@ -49,7 +50,7 @@ const obtenerNotas = async () => {
 
 const formNotas = document.querySelector('#form-notas')
 
-formNotas.addEventListener('submit', async function (event) {
+formNotas.addEventListener('submit', async (event) => {
     event.preventDefault()
 
     const notaObj = {
@@ -76,5 +77,16 @@ formNotas.addEventListener('submit', async function (event) {
         console.log(error)
     }
 })
+
+document.querySelector('#btn-popup').addEventListener('click', () => {
+    document.querySelector('.overlay-popup').style.visibility = 'visible'
+    formNotas.style.opacity = '1'
+})
+
+document.querySelector('#cerrar-popup').addEventListener('click', () => {
+    document.querySelector('.overlay-popup').style.visibility = 'hidden'
+    formNotas.style.opacity = '0'
+})
+
 
 obtenerNotas()
